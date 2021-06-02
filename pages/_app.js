@@ -2,23 +2,12 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Navbar from "../components/Navbar";
 import "bootstrap/dist/css/bootstrap.css";
-import { useState } from "react";
 import Sidebar from "~/components/Sidebar";
+import List from "~/components/List";
 
 // Constants
-const navItems = [
-  { path: "/", text: "Home" },
-  { path: "/use-state", text: "useState" },
-  { path: "/use-reducer", text: "useReducer" },
-  { path: "/use-ref", text: "useRef" },
-  { path: "/use-imperative-handle", text: "useImperativeHandle" },
-  { path: "/use-callback", text: "useCallback" },
-  { path: "/use-memo", text: "useMemo" },
-  { path: "/custom-hooks", text: "Custom Hooks" },
-];
 
 const useRefApps = [
-  { path: "/use-ref", text: "General" },
   { path: "/use-ref/apps/focus-app", text: "Focus" },
   { path: "/use-ref/apps/copy-app", text: "Copy" },
   { path: "/use-ref/apps/media-player-app", text: "Media Player" },
@@ -27,10 +16,11 @@ const useRefApps = [
   { path: "/use-ref/apps/loading-app", text: "Loading" },
 ];
 
-const useCustomApps = [
-  { path: "/usecustom", text: "General" },
-  { path: "/usecustom/mousepositionapp", text: "useMousePosition" },
+const customHooksApps = [
+  { path: "/custom-hooks/apps/mouse-position-app", text: "useMousePosition" },
 ];
+
+const navItems = [{ path: "/", text: "Home" }];
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -45,11 +35,20 @@ function MyApp({ Component, pageProps }) {
       <Navbar brand="React Hooks" navItems={navItems} />
       <div className="container">
         <div className="row">
-          <div className="col-10">
-            <Component {...pageProps} />
-          </div>
           <div className="col-2">
-            <Sidebar sidebarItems={useRefApps} />
+            <h5>useState</h5>
+            <h5>useRef</h5>
+            <List title="useRef" listItems={useRefApps} />
+            <h5>useReducer</h5>
+            <h5>useImperativeHandle</h5>
+            <h5>useRef</h5>
+            <h5>useCallback</h5>
+            <h5>useMemo</h5>
+            <h5>Custom Hooks</h5>
+            <List title="useRef" listItems={customHooksApps} />
+          </div>
+          <div className="col-10 border-start border-light ps-4">
+            <Component {...pageProps} />
           </div>
         </div>
       </div>
