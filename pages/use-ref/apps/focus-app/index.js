@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Code from "@/components/Code";
+import Code from "~/components/Code";
 
 const initialState = [
   { id: 1, text: "text1" },

@@ -2,7 +2,7 @@ import React from "react";
 import CounterProvider from "./context";
 
 // Compomnents
-import Code from "@/components/Code";
+import Code from "~/components/Code";
 import Counter from "./counter";
 
 const useReducerCode =

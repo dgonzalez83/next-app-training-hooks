@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Code from "@/components/Code";
+import Code from "~/components/Code";
 import List from "./List";
 
 const initialUsers = [

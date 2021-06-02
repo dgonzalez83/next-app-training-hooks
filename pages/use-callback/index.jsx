@@ -1,5 +1,5 @@
 import React from "react";
-import Code from "@/components/Code";
+import Code from "~/components/Code";
 
 const useCallbackCode = `const memoizedCallback = useCallback(
   () => {

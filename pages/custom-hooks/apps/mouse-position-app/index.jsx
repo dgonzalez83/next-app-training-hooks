@@ -1,5 +1,5 @@
 import React from "react";
-import useMousePosition from "@/hooks/useMousePosition";
+import useMousePosition from "~/hooks/useMousePosition";
 
 function MousePositionApp() {
   const position = useMousePosition();

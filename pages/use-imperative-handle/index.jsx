@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import FancyInput from "./FancyInput";
-import Code from "@/components/Code";
+import Code from "~/components/Code";
 
 const fancyInputCode = `import React, { forwardRef, useImperativeHandle, useRef } from "react";
 

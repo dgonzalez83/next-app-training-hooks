@@ -11,11 +11,11 @@ function Navbar({ brand, navItems }) {
       </a>
       <ul className="nav">
         {navItems.map((route) => {
-          const { path, children } = route;
+          const { path, text } = route;
           return (
             <li key={path} className="nav-item">
               <Link href={path}>
-                <a className="nav-link">{children}</a>
+                <a className="nav-link">{text}</a>
               </Link>
             </li>
           );

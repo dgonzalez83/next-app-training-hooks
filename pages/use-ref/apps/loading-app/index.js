@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Card from "@/components/Card";
+import Card from "~/components/Card";
 
 import { getPost } from "@/services/posts-api";
 
