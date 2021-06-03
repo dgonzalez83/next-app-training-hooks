@@ -1,20 +1,22 @@
 import React from "react";
 import Link from "next/link";
 
-function List({ listItems }) {
+function List({ listItems = [] }) {
   return (
-    <ul className="d-flex flex-column nav">
-      {listItems.map((item) => {
-        const { path, text } = item;
-        return (
-          <li key={path} className="nav-item">
-            <Link href={path}>
-              <a className="nav-link">{text}</a>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <ul className="d-flex flex-column nav">
+        {listItems.map((item) => {
+          const { href, text } = item;
+          return (
+            <li key={href} className="nav-item">
+              <Link href={href}>
+                <a className="nav-link">{text}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }
 

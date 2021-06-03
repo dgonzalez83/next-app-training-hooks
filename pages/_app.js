@@ -1,17 +1,14 @@
+import React from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import Navbar from "../components/Navbar";
+import Navbar from "~/components/Navbar";
 import Drawer from "~/components/Drawer";
+import { routes as navItems } from "~/routes";
 
 // styles
 import "bootstrap/dist/css/bootstrap.css";
 
-// Constants
-const navItems = [{ path: "/", text: "Home" }];
-
+// eslint-disable-next-line
 function MyApp({ Component, pageProps }) {
-  // const router = useRouter();
-
   return (
     <>
       <Head>
@@ -20,11 +17,14 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar brand="React Hooks Training" navItems={navItems} />
+      <Navbar
+        brand="React Hooks Training"
+        navItems={[{ path: "/", component: "Home" }]}
+      />
       <div className="container">
         <div className="row">
           <div className="col-2">
-            <Drawer />
+            <Drawer navItems={navItems} />
           </div>
           <div className="col-10 border-start border-light ps-4">
             <Component {...pageProps} />

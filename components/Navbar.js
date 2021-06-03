@@ -13,26 +13,23 @@ function Navbar({ brand, navItems }) {
           </a>
         </Link>
         <ul className="nav me-auto">
-          {navItems.map((route) => {
-            const { path, text } = route;
-            return (
-              <li key={path} className="nav-item">
-                <Link href={path}>
-                  <a className="nav-link">{text}</a>
-                </Link>
-              </li>
-            );
-          })}
+          {navItems.map(({ path, component }) => (
+            <li key={path} className="nav-item">
+              <Link href={path}>
+                <a className="nav-link">{component}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
-        <form class="d-flex">
+        <form className="d-flex">
           <input
-            class="form-control me-2"
+            className="form-control me-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
             disabled
           />
-          <button class="btn btn-outline-primary" type="submit" disabled>
+          <button className="btn btn-outline-primary" type="submit" disabled>
             Search
           </button>
         </form>
