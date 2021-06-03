@@ -32,7 +32,7 @@ function Navbar({ brand, navItems }) {
             aria-label="Search"
             disabled
           />
-          <button class="btn btn-outline-success" type="submit" disabled>
+          <button class="btn btn-outline-primary" type="submit" disabled>
             Search
           </button>
         </form>
