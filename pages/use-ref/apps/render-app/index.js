@@ -20,7 +20,7 @@ export default function RenderApp() {
   // step #2: render component
   return (
     <>
-      <h2>Render App</h2>
+      <h2 className="mt-2 mb-4">Render App</h2>
       <form>
         <div className="form-group"></div>
         <input

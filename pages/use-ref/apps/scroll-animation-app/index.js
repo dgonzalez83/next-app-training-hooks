@@ -21,7 +21,7 @@ export default function ScrollAnimationApp() {
     <>
       <h2>Scroll Animation App</h2>
       <div
-        className="mt-3 p-2"
+        className="mt-2 mb-4"
         style={{ height: "125vh", background: background }}
         ref={divRef}
       >

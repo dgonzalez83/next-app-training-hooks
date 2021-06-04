@@ -14,7 +14,7 @@ export default function MediaPlayerApp() {
 
   return (
     <>
-      <h2 className="my-3">Media Player App</h2>
+      <h2 className="mt-2 mb-4">Media Player App</h2>
       <video
         onClick={handleClick}
         ref={videoRef}

@@ -30,7 +30,7 @@ const reducerCode = `const reducer = (state, action) => {
 function UseReducerPage() {
   return (
     <>
-      <h2 className="text-center my-3">useReducer</h2>
+      <h2 className="mt-2 mb-4">useReducer</h2>
       <Code language="jsx">{useReducerCode}</Code>
       <p>
         Una alternativa a <code>useState</code>. Acepta un reducer de tipo{" "}

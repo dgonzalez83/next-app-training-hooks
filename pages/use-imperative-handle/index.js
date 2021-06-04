@@ -29,7 +29,7 @@ function UseImperativeHandlePage() {
   return (
     <>
       <div>
-        <h2 className="text-center my-3">useImperativeHandle</h2>
+        <h2 className="mt-2 mb-4">useImperativeHandle</h2>
         <Code language="jsx">{`useImperativeHandle(ref, createHandle, [deps])`}</Code>
         <p>
           <code>useImperativeHandle</code> personaliza el valor de instancia que

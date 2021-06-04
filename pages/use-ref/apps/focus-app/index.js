@@ -36,7 +36,7 @@ export default function FocusApp() {
 
   return (
     <>
-      <h2>Focus App</h2>
+      <h2 className="mt-2 mb-4">Focus App</h2>
       <p>When enter some things focus stay in input element.</p>
 
       <Code language="jsx">{focusCode}</Code>

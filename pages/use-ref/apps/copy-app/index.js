@@ -23,7 +23,7 @@ function Page3() {
 
   return (
     <>
-      <h2>Copy App</h2>
+      <h2 className="mt-2 mb-4">Copy App</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group mt-3">
           <label className="form-label">Texto: </label>

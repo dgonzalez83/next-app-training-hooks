@@ -11,7 +11,7 @@ const useCallbackCode = `const memoizedCallback = useCallback(
 function UseCallbackPage() {
   return (
     <>
-      <h2 className="text-center my-3">UseCallback</h2>
+      <h2 className="mt-2 mb-4">UseCallback</h2>
       <Code language="jsx">{useCallbackCode}</Code>
       <p>Devuelve un callback memorizado.</p>
       <p>{`Pasa un callback en línea y un arreglo de dependencias. useCallback devolverá una versión memorizada del callback que solo cambia si una de las dependencias ha cambiado. Esto es útil cuando se transfieren callbacks a componentes hijos optimizados que dependen de la igualdad de referencia para evitar renders innecesarias (por ejemplo, shouldComponentUpdate).`}</p>

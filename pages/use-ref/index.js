@@ -18,7 +18,7 @@ const CODE_TEMPLATE_STRING = `function TextInputWithFocusButton() {
 function UserRefPage() {
   return (
     <>
-      <h2 className="text-center my-3">useRef</h2>
+      <h2 className="mt-2 mb-4">useRef</h2>
       <Code language="jsx">{`const refContainer = useRef(initialValue)`}</Code>
 
       <p>

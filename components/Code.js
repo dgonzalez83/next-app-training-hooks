@@ -18,14 +18,18 @@ const prismjsTheme = {
 */
 
 const Code = ({ children, language }) => {
+  // `lang-${language}`
+  const className = "lang-" + language;
+
+  /*
   useEffect(() => {
     Prism.highlightAll();
   }, []);
-
+*/
   return (
     <div className="w-100">
       <pre>
-        <code className={`lang-${language}`}>{children}</code>
+        <code className={className}>{children}</code>
       </pre>
     </div>
   );

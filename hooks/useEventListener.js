@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-function useEventListener(eventName, handler, element = window) {
+function useEventListener(eventName, handler, element) {
   // Create a ref that stores handler
   const savedHandler = useRef();
   // Update ref.current value if handler changes.
@@ -10,6 +10,7 @@ function useEventListener(eventName, handler, element = window) {
   useEffect(() => {
     savedHandler.current = handler;
   }, [handler]);
+
   useEffect(
     () => {
       // Make sure element supports addEventListener

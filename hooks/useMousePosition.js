@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useEventListener } from "./useEventListener";
 
 const initialPosition = { x: null, y: null };
 
@@ -16,7 +15,10 @@ function useMousePosition() {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   }, []);
 
   return position;

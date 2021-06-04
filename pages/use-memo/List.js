@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import Item from "./Item";
 
-const List = memo(({ users, handleDelete }) => {
+const List = ({ users, handleDelete }) => {
   useEffect(() => {
     console.log("List render");
   });
@@ -15,6 +15,8 @@ const List = memo(({ users, handleDelete }) => {
       </ul>
     </div>
   );
-});
+};
 
-export default List;
+const MemoizedList = memo(List);
+
+export default MemoizedList;

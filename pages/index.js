@@ -1,3 +1,4 @@
+import * as React from "react";
 import Code from "@/components/Code";
 
 const hooksCode = `import React, { useState } from 'react';
@@ -19,7 +20,7 @@ function Example() {
 export default function Home() {
   return (
     <>
-      <h2 className="text-center my-3">Home</h2>
+      <h2 className="text-center mt-2 mb-4">Home</h2>
       <Code language="jsx">{hooksCode}</Code>
       <p>Antes de continuar, debes notar que los Hooks son:</p>
       <ul>

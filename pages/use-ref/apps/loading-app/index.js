@@ -31,7 +31,7 @@ export default function LoadingApp() {
 
   return (
     <>
-      <h2>Loading App</h2>
+      <h2 className="mt-2 mb-4">Loading App</h2>
       {loading ? (
         <h5 className="text-center">Loading posts...</h5>
       ) : (

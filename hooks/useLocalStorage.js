@@ -1,7 +1,5 @@
-import React from "react";
-import Code from "@/components/Code";
+import { useState } from "react";
 
-const useCustomHookCode = `
 // Hook
 function useLocalStorage(key, initialValue) {
   // State to store our value
@@ -36,15 +34,5 @@ function useLocalStorage(key, initialValue) {
   };
   return [storedValue, setValue];
 }
-`;
 
-function CustomHooksHomePage() {
-  return (
-    <>
-      <h2 className="mt-2 mb-4">Custom Hooks</h2>
-      <Code language="jsx">{useCustomHookCode}</Code>
-    </>
-  );
-}
-
-export default CustomHooksHomePage;
+export { useLocalStorage };

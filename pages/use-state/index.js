@@ -8,7 +8,7 @@ function UseStatePage() {
 
   return (
     <>
-      <h2 className="text-center my-3">useState</h2>
+      <h2 className="mt-2 mb-4">useState</h2>
       <Code language="jsx">{`const [state, setState] = useState(initialValue)`}</Code>
       <div className="d-flex flex-column justify-content-center align-items-center mx-auto my-5 bg-light border border-muted p-2 rounded">
         <p>{state.counter}</p>

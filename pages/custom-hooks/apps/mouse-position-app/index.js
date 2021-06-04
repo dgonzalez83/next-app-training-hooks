@@ -1,12 +1,14 @@
-import useMousePosition from "~/hooks/useMousePosition";
+import React from "react";
+import { useBackgroundFromMousePosition } from "~/hooks/useBackgroundFromMousePosition";
 
 function MousePositionApp() {
-  const position = useMousePosition();
-
+  const { position, background } = useBackgroundFromMousePosition();
   return (
     <>
-      <div id="test">Mouse Position App</div>
-      <pre>{JSON.stringify(position, null, "  ")}</pre>
+      <h2 className="mt-2 mb-4 round">useMousePosition()</h2>
+      <div className="card p-4 text-light" style={{ background }}>
+        <pre>{JSON.stringify(position, null, 2)}</pre>
+      </div>
     </>
   );
 }

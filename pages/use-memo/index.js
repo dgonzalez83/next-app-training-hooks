@@ -1,4 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import Code from "~/components/Code";
 import List from "./List";
 
@@ -69,8 +75,7 @@ function UseMemoPage() {
 
   return (
     <>
-      <h2 className="text-center my-3">useMemo</h2>
-
+      <h2 className="mt-2 mb-4">useMemo</h2>
       <Code language="jsx">
         {
           "const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a,b]);"
